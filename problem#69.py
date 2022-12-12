@@ -21,6 +21,9 @@ def largest_product(numbers_list: list) -> int:
     print(max)
 
 
+"""
+O(n^3)
+"""
 
 lst = [-10, -10, 5, 2]
 largest_product(lst)
