@@ -9,7 +9,6 @@ Given n = 27, return 3 since 27 = 3**2 + 3**2 + 3**2 = 9 + 9 + 9.
 """
 
 
-
 """
 My comment:
 
@@ -17,6 +16,7 @@ First of all for this task, the smallest number is always to be 1 because of tha
 but to finish this challenge lets assume that we are excluding 1 and the max number of added powers
 cant be higher than 3. 
 """
+
 
 class Finder:
     def __init__(self, n):
@@ -34,32 +34,37 @@ class Finder:
 
         # checking dictionary for existing values
         for k, v in self.dict_cache.items():
-            if v == self.n or v*2 == self.n or v*3 == self.n: 
+            
+            # simple check for if any value multiplied by 2 or 3 will match the n value
+            if v == self.n or v*2 == self.n or v*3 == self.n:
                 return f"Number we are looking for is equal to {k}"
+
+            # otherwise check if combination of any 3 values from dict will match n number
             else:
                 for i in range(2, len(self.dict_cache)):
                     for j in range(2, len(self.dict_cache)):
                         for k in range(2, len(self.dict_cache)):
+
                             if self.dict_cache[i] + self.dict_cache[j] == self.n:
+
                                 if self.dict_cache[i] < self.dict_cache[j]:
                                     return f"Number we are looking for is equal to {i} the higher number is equal to {j}"
                                 else:
                                     return f"Number we are looking for is equal to {j} the higher number is equal to {i}"
+
                             elif self.dict_cache[i] + self.dict_cache[j] + self.dict_cache[k] == self.n:
+
                                 if self.dict_cache[i] < (self.dict_cache[j] and self.dict_cache[k]):
                                     return f"Number we are looking for is equal to {i} because {i}**2 + {j} ** 2 + {k} ** 2 = {self.n}"
                                 else:
+
                                     if self.dict_cache[j] < self.dict_cache[k]:
                                         return f"Number we are looking for is equal to {j} because {i}**2 + {j} ** 2 + {k} ** 2 = {self.n}"
                                     else:
                                         return f"Number we are looking for is equal to {k} because {i}**2 + {j} ** 2 + {k} ** 2 = {self.n}"
-                                        
+
 
 if __name__ == "__main__":
-
     find_number = Finder(27)
     smallest = find_number.find_smallest()
     print(smallest)
-
-
-        
