@@ -40,4 +40,3 @@ if __name__ == '__main__':
 
     for name in list_of_lower_scores:
         print(name)
-        
