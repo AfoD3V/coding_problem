@@ -41,8 +41,7 @@ Because `nums[0] + nums[1] == 9`, we return `[0, 1]`.
 
 // ------------------------------------------------------------------------------------------------
 // Solution O(n)
-// ------------------------------------------------------------------------------------------------
-
+// ---------------------------------
 function twoSum(nums: number[], target: number): number[] {
     let seen: {[key: number]: number} = {};
     seen[nums[0]] = 0;
@@ -54,7 +53,8 @@ function twoSum(nums: number[], target: number): number[] {
             seen[nums[i]] = i;
         }
     }
-};
+    return []; // Return empty array if no solution found
+}
 
 // ------------------------------------------------------------------------------------------------
 // Explanation  
