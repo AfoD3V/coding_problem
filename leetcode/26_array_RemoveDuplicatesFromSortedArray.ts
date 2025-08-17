@@ -81,46 +81,46 @@ function removeDuplicates(nums: number[]): number {
 // ----------------------------------------------------------------------------------------------------
 
 // Test Case 1: Basic case with duplicates
-const nums1: number[] = [1, 1, 2];
+const dupNums1: number[] = [1, 1, 2];
 console.log("Test Case 1:");
-console.log("Input:", nums1);
-const k1 = removeDuplicates(nums1);
-console.log("Output:", k1, "nums =", nums1.slice(0, k1));
+console.log("Input:", dupNums1);
+const dupK1 = removeDuplicates(dupNums1);
+console.log("Output:", dupK1, "nums =", dupNums1.slice(0, dupK1));
 console.log("Expected: 2, nums = [1, 2]");
 console.log("---");
 
 // Test Case 2: Multiple duplicates
-const nums2: number[] = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
+const dupNums2: number[] = [0, 0, 1, 1, 1, 2, 2, 3, 3, 4];
 console.log("Test Case 2:");
-console.log("Input:", nums2);
-const k2 = removeDuplicates(nums2);
-console.log("Output:", k2, "nums =", nums2.slice(0, k2));
+console.log("Input:", dupNums2);
+const dupK2 = removeDuplicates(dupNums2);
+console.log("Output:", dupK2, "nums =", dupNums2.slice(0, dupK2));
 console.log("Expected: 5, nums = [0, 1, 2, 3, 4]");
 console.log("---");
 
 // Test Case 3: No duplicates
-const nums3: number[] = [1, 2, 3, 4, 5];
+const dupNums3: number[] = [1, 2, 3, 4, 5];
 console.log("Test Case 3:");
-console.log("Input:", nums3);
-const k3 = removeDuplicates(nums3);
-console.log("Output:", k3, "nums =", nums3.slice(0, k3));
+console.log("Input:", dupNums3);
+const dupK3 = removeDuplicates(dupNums3);
+console.log("Output:", dupK3, "nums =", dupNums3.slice(0, dupK3));
 console.log("Expected: 5, nums = [1, 2, 3, 4, 5]");
 console.log("---");
 
 // Test Case 4: Single element
-const nums4: number[] = [1];
+const dupNums4: number[] = [1];
 console.log("Test Case 4:");
-console.log("Input:", nums4);
-const k4 = removeDuplicates(nums4);
-console.log("Output:", k4, "nums =", nums4.slice(0, k4));
+console.log("Input:", dupNums4);
+const dupK4 = removeDuplicates(dupNums4);
+console.log("Output:", dupK4, "nums =", dupNums4.slice(0, dupK4));
 console.log("Expected: 1, nums = [1]");
 console.log("---");
 
 // Test Case 5: All same elements
-const nums5: number[] = [2, 2, 2, 2, 2];
+const dupNums5: number[] = [2, 2, 2, 2, 2];
 console.log("Test Case 5:");
-console.log("Input:", nums5);
-const k5 = removeDuplicates(nums5);
-console.log("Output:", k5, "nums =", nums5.slice(0, k5));
+console.log("Input:", dupNums5);
+const dupK5 = removeDuplicates(dupNums5);
+console.log("Output:", dupK5, "nums =", dupNums5.slice(0, dupK5));
 console.log("Expected: 1, nums = [2]");
 console.log("---");
