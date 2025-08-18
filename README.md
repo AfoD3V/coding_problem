@@ -1,5 +1,3 @@
-# Coding Problems
-
 A collection of solved Data Structures and Algorithms (DSA) problems from various platforms:
 
 - **LeetCode**: Algorithm challenges with TypeScript solutions
